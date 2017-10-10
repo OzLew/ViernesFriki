@@ -1,0 +1,472 @@
+@colorDarkPrimary:   #D32F2F;
+@colorPrimary:       #F44336;
+@colorLightPrimary:  #FFCDD2;
+@colorTextPrimary:   #FFFFFF;
+@colorAccent:        #9E9E9E;
+@colorPrimaryText:   #212121;
+@colorSecondaryText: #757575;
+@colorDivider:       #BDBDBD;
+
+.opacidad(@opacidad: 0.5){
+	-webkit-opacity: @opacidad;
+	-moz-opacity: @opacidad;
+	opacity: @opacidad;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+//Template
+html{
+	height: 100%;
+	body{
+		height: 100%;
+		header{
+			background: @colorDarkPrimary;
+			padding: 10px 15px;
+			position: relative;
+			.imagenLogo{
+				background-image: url("../img/friki.png");
+				background-repeat: no-repeat;
+				background-size: 20%;
+				line-height: 90px;
+				width: 100%;
+				height: auto;
+				&:hover{
+					cursor: pointer;
+				}
+				nav{
+					float: right;
+					color: @colorTextPrimary;
+					line-height: 90px;
+					.head{
+						padding: 0;
+						list-style: none;
+						>li{
+							list-style-type: none;
+							display: inline-block;
+							font-size: 20px;
+							line-height: normal;
+							font-weight: bold;
+							padding: 5px 5px;
+							padding-left: 1px;
+							a{
+								margin: 5px 5px;
+								text-decoration: none;
+								color: @colorTextPrimary;
+							}
+							&:hover{
+								cursor: pointer;
+								background: #ffc400;
+								border-radius: 50px;
+								>ul{
+									display: block;
+								}
+							}
+							>ul{
+								display: none;
+								list-style: none;
+								position: absolute;
+								background-color: @colorDarkPrimary;
+								z-index: 2;
+								display: none;
+								position: absolute;
+								min-width: 160px;
+								box-shadow: 3px 8px 10px 0px rgba(0,0,0,0.7);
+								z-index: 1;
+								padding: 3px;
+								>li{
+									border: 1.5px solid white;
+									border-bottom: 0;
+									padding: 5px;
+									&:hover{
+										background-color: #ffc400;
+										>ul{
+											display: block;
+										}
+									}
+									&:last-child{
+										border-bottom: 1.5px solid white;
+									}
+									>ul{
+										display: none;
+										list-style: none;
+										position: absolute;
+										background-color: @colorDarkPrimary;
+										z-index: 2;
+										display: none;
+										position: absolute;
+										min-width: 160px;
+										box-shadow: 3px 8px 10px 0px rgba(0,0,0,0.7);
+										z-index: 1;
+										left: 160px;
+										top: 0;
+										padding: 3px;
+										>li{
+											border: 1.5px solid white;
+											border-bottom: 0;
+											padding: 5px;
+											&:hover{
+												background-color: #ffc400;
+											}
+											&:last-child{
+												border-bottom: 1.5px solid white;
+											}
+										}
+									}
+									.anime{
+										top: 35px;
+									}
+									.game{
+										top: 70px;
+									}
+								}
+							}
+						}
+					}
+				}	
+			}
+		}
+		.wrapper{
+			width: 80%;
+			max-width: 1200px;
+			max-height: 1200px;
+			margin: auto;
+			overflow: hidden;
+		}
+		#principal{
+			p{
+				padding-top: 65%;
+				width: 60%;
+				margin: auto;
+				color: @colorPrimaryText;
+				font-size: 17px;
+				text-align: justify;
+			}
+			button{
+				border-radius:5px; 
+				padding:7px 25px;  
+				border:2px solid @colorDarkPrimary;
+				margin-left: 440px;
+				margin-top: 20px;
+    			transition-duration: 0.2s;
+    			box-shadow: 0 9px #999;
+    			&:hover{
+    				cursor: pointer;
+    				background-color:@colorDarkPrimary;
+   					color: yellow;
+   					box-shadow: 0 5px #666;
+    				transform: translateY(4px);
+    			}
+			}
+			article{
+				width: 15%;
+				color: @colorPrimaryText;
+				text-align: center;
+				font-size: 17px;
+				display: inline-block;
+				padding-left: 120px;
+				padding-top: 50px;
+				div{
+					width: 200px;
+					float: left;
+					img{
+						width: 150px;
+						height: 150px;
+						border-radius: 100px;
+						border: 3px solid black;
+					}
+					h2{
+						font-weight: bold;
+					}
+					p{
+						padding-top: 0px;
+					}
+				}
+			}
+		}
+		.back{
+			background-image: url("../img/viernes.png");
+			width: 70%;
+			height: 180%;
+			background-repeat: no-repeat;
+			background-position: top;
+			background-size: 80.5%;
+		}
+		.child{
+			background: @colorDarkPrimary;
+			min-height: 15px;
+			width: 100%;
+			height: 15px;
+		}
+		.espace{
+			height: 5px;
+		}
+		//Inicio Login
+		#floatContainer{
+			display: none;
+			margin: 0 auto;
+		    position: fixed;
+		    left: 0;
+		    right: 0;
+		    top: 35%;
+		    max-width: 25%;
+		    padding: 15px;
+		    padding-top: 30px;
+		    background-color: white;
+		    z-index: 3;
+		    .cross{
+		    	position: absolute;
+		    	right: 5px;
+		    	top: 5px;
+		    	max-width: 20px;
+		    	&:hover{
+		    		cursor: pointer;
+		    	}
+		    }
+		    form{
+				text-align:center; 
+				padding-top:15px;
+				div{
+					margin:10px 0 15px;
+					label{
+						display:block; 
+						margin-bottom:5px;
+					}
+					input{
+						width:100%; 
+						height:20px; 
+						border-radius:5px; 
+						border:1px solid #ccc;
+					}
+				}
+				button{
+					border-radius:5px; 
+					padding:7px 25px; 
+					background-color:#008CDB; 
+					color:#fff; 
+					border:none;
+				}
+			}
+		}
+		#negro{
+			.opacidad();
+	    	content: "";
+	    	display: none;
+	    	position: fixed;
+	    	left: 0;
+	    	right: 0;
+	    	top: 0;
+	    	bottom: 0;
+	    	background: @colorPrimaryText;
+	    	&:hover{
+	    		cursor: pointer;
+	    	}
+		}
+		//Fin Login
+		.footerP{
+			background: @colorDarkPrimary;
+			min-height: 80px;
+			overflow: hidden;
+			font-weight: bold;
+			div{
+				margin: 0 auto;
+				.left{
+					float: left;
+					margin-top: 10px;
+					ul{
+						color: white;
+						list-style-type: none;
+						a{
+							text-decoration: none;
+							color: @colorTextPrimary;
+						}
+					}
+				}
+				.right{
+					float: right;
+					margin: 25px 25px;
+					display: inline-block;
+					.push{
+						margin-right: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// -Manga-
+#manga{
+	div{
+		h1{
+			width: 100%;
+			margin-left: 37%;
+			font-size: 42px;
+		}
+	}
+	.libro{
+		display: inline-block;
+		margin-left: 130px;
+		margin-top: 50px;
+		div{
+			width: 100%;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		img{
+			border: 1px solid black;
+			width: 250px;
+			height: 375px;
+		}
+		p{
+			text-align: center;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.shop{
+			border-radius:5px; 
+			padding:7px 25px;  
+			border:2px solid @colorDarkPrimary;
+			margin-left: 72px;
+			margin-top: 10px;
+			margin-bottom: 50px;
+			transition-duration: 0.2s;
+			box-shadow: 0 9px #999;
+			&:hover{
+				cursor: pointer;
+				background-color:@colorDarkPrimary;
+				color: yellow;
+				box-shadow: 0 5px #666;
+				transform: translateY(4px);
+			}
+		}
+	}
+}
+
+#anime{
+	div{
+		h1{
+			width: 100%;
+			margin-left: 37%;
+			font-size: 42px;
+		}
+	}
+	.libro{
+		display: inline-block;
+		margin-left: 130px;
+		margin-top: 50px;
+		div{
+			width: 100%;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		img{
+			border: 1px solid black;
+			width: 250px;
+			height: 375px;
+		}
+		p{
+			text-align: center;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.shop{
+			border-radius:5px; 
+			padding:7px 25px;  
+			border:2px solid @colorDarkPrimary;
+			margin-left: 72px;
+			margin-top: 10px;
+			margin-bottom: 50px;
+			transition-duration: 0.2s;
+			box-shadow: 0 9px #999;
+			&:hover{
+				cursor: pointer;
+				background-color:@colorDarkPrimary;
+				color: yellow;
+				box-shadow: 0 5px #666;
+				transform: translateY(4px);
+			}
+		}
+	}
+}
+
+#carrito{
+	.extra{
+		font-size: 28px;
+		text-align: right;
+	}
+	div{
+		margin-top: 15px;
+		i{
+			font-size: 42px;
+			margin-left: 40%;
+			h1{
+				width: 100%;
+				margin-left: 37%;
+				font-size: 42px;
+				position: relative;
+				bottom: 40px;
+			}
+		}
+	}
+	.center{
+		width: 70%;
+		margin: 0% 15% 5%;
+		//border: 2px solid black;
+		background: @colorDarkPrimary;
+		padding: 10px;
+		ul{
+			list-style: none;
+			.columna{
+				color: white;
+				font-weight: bold;
+				ul{
+					li{
+						width: 14%;
+						display: inline-block;
+						border: none;
+						margin: 0 50px;
+					}
+				}
+			}
+			li{
+				border: 1.5px solid white;
+				border-bottom: 0;
+				.enElCarrito{
+					img{
+						border: 2px solid white;
+						width: 150px;
+						height: 200px;
+						position: relative;
+    					margin: 30px 20px;
+					}
+					.texto{
+						position: absolute;
+						color: white;
+						font-weight: bold;
+						font-size: 28px;
+						display: inline-block;
+						width: 80%;
+						text-align: center;
+						ul{
+							list-style: none;
+							position: relative;
+							right: 15%;
+							padding-top: 8%;
+							.txt1{
+								border: none;
+								width: 20%;
+								display: inline-block;
+							}
+						}
+					}
+				}
+				&:last-child{
+					border-bottom: 1.5px solid white;
+				}
+			}
+		}
+	}
+}

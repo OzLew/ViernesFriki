@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="img/cube.png" />
+	<link rel="stylesheet" type="text/css" href="Estilo/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="Estilo/estilo.css">
+	<script src="js/Login.js"></script>
+	<title>
+		Viernes Friki
+	</title>
+</head>
+<body>
+	<header>
+		<div class="imagenLogo wrapper">
+			<nav>
+			    <ul class="head">
+			        <li><a href="index.html">Inicio</a></li>
+			     	<li><a href="#">Conócenos</a></li>
+			     	<li>
+			     		Productos
+			     		<ul class="drop">
+		     		    	<li>
+		     		    		Mangas
+		     		    		<ul>
+	     		    		    	<li>
+	     		    		    		<a href="Manga.html">Shonen</a>
+	     		    		    	</li>
+	     		    		    	<li>
+	     		    		    		<a href="">Gore</a>
+	     		    		    	</li>
+	     		    		    	<li>
+	     		    		    		<a href="">Aventura</a>
+	     		    		    	</li>
+	     		    		    	<li>
+	     		    		    		<a href="">Sci-Fi</a>
+	     		    		    	</li>
+		     		    		</ul>
+		     		    	</li>
+		     		    	<li>
+		     		    		Animes
+		     		    		<ul class="anime">
+	     		    		    <li>
+	     		    		    		<a href="Anime">Shonen</a>
+	     		    		    	</li>
+	     		    		    	<li>
+	     		    		    		<a href="">Gore</a>
+	     		    		    	</li>
+	     		    		    	<li>
+	     		    		    		<a href="">Aventura</a>
+	     		    		    	</li>
+	     		    		    	<li>
+	     		    		    		<a href="">Sci-Fi</a>
+	     		    		    	</li>
+		     		    		</ul>
+		     		    	</li>
+		     		    	<li>
+		     		    		Video Juegos
+		     		    		<ul class="game">
+	     		    		    	<li>
+	     		    		    		<a href="">Peleas</a>
+	     		    		    	</li>
+	     		    		    	<li>
+	     		    		    		<a href="">Carreras</a>
+	     		    		    	</li>
+	     		    		    	<li>
+	     		    		    		<a href="">Aventura</a>
+	     		    		    	</li>
+	     		    		    	<li>
+	     		    		    		<a href="">Sci-Fi</a>
+	     		    		    	</li>
+		     		    		</ul>
+		     		    	</li>
+		     		    	<li>
+		     		    		<a href="">Figuras</a>
+		     		    	</li>
+			     		</ul>
+			     	</li>
+			     	<li><a href="#">Novedades</a></li>
+		     		<li>
+			     		<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+			     		<a href="carrito.html">Carrito</a>
+			     	</li>
+			     	<li>
+						<i class="fa fa-sign-in" aria-hidden="true"></i>
+						<a href="#" onclick="abrirLogin()">Log-in/Sign-in</a>
+			     	</li>
+			    </ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="espace"></div>
+	<div class="child"></div>
+		
+	<section id="principal" class="wrapper back">
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<button>Ver más</button>
+		</div>
+
+		<article>
+			<div>
+				<img src="img/cono.png">
+				<h2>Conócenos</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="">Ver mas.</a></p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/pro.png">
+				<h2>Productos</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="">Ver mas.</a></p>
+			</div>
+		</article>
+		<article>
+			<div>
+				<img src="img/no.png">
+				<h2>Novedades</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="">Ver mas.</a></p>
+			</div>
+		</article>
+	</section>
+
+	<div id="floatContainer">
+		<img class="cross" src="img/salir.png" alt="Cerrar" title="Cerrar" onmouseover="this.src='img/salir2.png'" onmouseout="this.src='img/salir.png'" onclick="abrirLogin()">
+			<form>
+				<div>
+					<label for="email">Correo Electronico</label>
+					<input type="email" name="email"
+					placeholder="example@mail.com">
+				</div>
+				<div>
+					<label for="password">Contraseña</label>
+					<input type="password" name="password" style="">
+				</div>
+				<button>Iniciar Sesión</button>
+			</form>
+	</div>
+	<div id="negro" onclick="abrirLogin()"></div>
+
+	<footer class="footerP">
+		<div class="wrapper">
+			<div class="left">
+				<ul>
+					<li>
+				    	<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+				    	Paul Michel Gachuz Osorio
+				    </li>
+				    <li>
+				    	<i class="fa fa-home" aria-hidden="true"></i> Calle Igualdad #238
+				    </li>
+				    <li>
+				    	<i class="fa fa-envelope" aria-hidden="true"></i>
+					    <a href="mailto:micheelgachuz@gmail.com">Micheelgachuz@gmail.com</a>
+				    </li>
+				    <li>
+				    	<i class="fa fa-phone" aria-hidden="true"></i> Cel. 612-217-35-45
+				    </li>
+				</ul>
+			</div>
+			<div class="right">
+				<a href="https://facebook.com" target="_blank">
+				<img src="img/facebook.png" alt="Facebook" class="push"></a>
+				
+				<a href="https://twitter.com" target="_blank">
+				<img src="img/twitter.png" alt="Twitter">
+				</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
